@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.esoxjem.Must_Movie">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.esoxjem.Must_Movie.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+
+        <activity android:name="com.esoxjem.Must_Movie.Login_Form">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.esoxjem.Must_Movie.listing.MoviesListingActivity"
+            tools:ignore="Instantiatable"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name="com.esoxjem.Must_Movie.details.MovieDetailsActivity"
+            android:theme="@style/AppTheme"
+            android:parentActivityName="com.esoxjem.Must_Movie.listing.MoviesListingActivity"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.esoxjem.Must_Movie.listing.MoviesListingActivity" />
+        </activity>
+
+        <activity android:name="com.esoxjem.Must_Movie.Signup_Form"> </activity>
+    </application>
+
+</manifest>
